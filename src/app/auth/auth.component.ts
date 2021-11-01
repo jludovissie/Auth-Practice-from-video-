@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm} from '@angular/forms'
+
 import { Observable } from 'rxjs';
 import { AuthService } from './auth.service';
 import { AuthResponseData } from './auth.service';
@@ -37,14 +38,16 @@ export class AuthComponent implements OnInit {
       
     authObs.subscribe(
         resData => { console.log(resData);
-        this. isLoading= false; } , 
-    
+        this. isLoading= false;
+        },    
         errorMessage => { 
           console.log(errorMessage); 
          
           this.error = errorMessage;   
-          this.isLoading= false; }
-      )  
+          this.isLoading= false;
+        } 
+    )     
+      
       form.reset();
     }
     
