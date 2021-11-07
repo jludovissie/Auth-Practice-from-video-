@@ -7,10 +7,11 @@ import { AppComponent } from './app.component';
 import { AuthComponent } from './auth/auth.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LoadingComponent } from './loading/loading.component';
+import { AlertComponent } from 'ngx-bootstrap/alert';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, AppBoostrapModule, HttpClientModule],
-  declarations: [ AppComponent, AuthComponent, LoadingComponent ],
+  declarations: [ AppComponent, AuthComponent, LoadingComponent, AlertComponent ],
   bootstrap:    [ AppComponent]
 })
 export class AppModule { }
