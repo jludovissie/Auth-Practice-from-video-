@@ -7,11 +7,24 @@ import { AppComponent } from './app.component';
 import { AuthComponent } from './auth/auth.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LoadingComponent } from './loading/loading.component';
-import { AlertComponent } from 'ngx-bootstrap/alert';
+import { AlertComponent } from './alert/alert.component';
+import { PlaceholderDirective } from './placeholder.directive';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule, AppBoostrapModule, HttpClientModule],
-  declarations: [ AppComponent, AuthComponent, LoadingComponent, AlertComponent ],
-  bootstrap:    [ AppComponent]
+  imports:      [ 
+                  BrowserModule, 
+                  FormsModule, 
+                  AppBoostrapModule, 
+                  HttpClientModule],
+
+  declarations: [ 
+                AppComponent, 
+                AuthComponent, 
+                LoadingComponent, 
+                AlertComponent,
+                PlaceholderDirective ],
+
+  bootstrap:    [ AppComponent],
+  entryComponents: [ AlertComponent]
 })
 export class AppModule { }
